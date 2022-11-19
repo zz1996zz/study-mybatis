@@ -9,13 +9,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Post {
 
-    private Long id;
+    private Long postId;
     private String title;
     private String content;
 
     @Builder
-    public Post(Long id, String title, String content) {
-        this.id = id;
+    public Post(Long postId, String title, String content) {
+        this.postId = postId;
         this.title = title;
         this.content = content;
     }

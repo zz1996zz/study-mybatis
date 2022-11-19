@@ -9,15 +9,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Member {
 
-    private Long id;
+    private Long memberId;
     private String name;
     private String phone;
     private String email;
     private Blog blog;
 
     @Builder
-    public Member(Long id, String name, String phone, String email, Blog blog) {
-        this.id = id;
+    public Member(Long memberId, String name, String phone, String email, Blog blog) {
+        this.memberId = memberId;
         this.name = name;
         this.phone = phone;
         this.email = email;

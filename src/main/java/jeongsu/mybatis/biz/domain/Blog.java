@@ -11,16 +11,14 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Blog {
 
-    private Long id;
+    private Long blogId;
     private String name;
-    private Member member;
     private List<Post> postList;
 
     @Builder
-    public Blog(Long id, String name, Member member, List<Post> postList) {
-        this.id = id;
+    public Blog(Long blogId, String name, List<Post> postList) {
+        this.blogId = blogId;
         this.name = name;
-        this.member = member;
         this.postList = postList;
     }
 

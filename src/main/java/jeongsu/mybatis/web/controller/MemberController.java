@@ -3,6 +3,7 @@ package jeongsu.mybatis.web.controller;
 import jeongsu.mybatis.biz.service.MemberService;
 import jeongsu.mybatis.web.dto.MemberDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,5 +18,10 @@ public class MemberController {
     @PostMapping("/join")
     public int join(MemberDto memberDto) {
         return memberService.join(memberDto);
+    }
+
+    @DeleteMapping("/withdraw")
+    public int withdraw(Long memberId) {
+        return memberService.withdraw(memberId);
     }
 }

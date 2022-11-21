@@ -14,4 +14,8 @@ public class MemberService {
     public int join(MemberDto memberDto) {
         return memberMapperRepository.insertMember(memberDto.toEntity());
     }
+
+    public int withdraw(Long memberId) {
+        return memberMapperRepository.deleteMember(memberId);
+    }
 }

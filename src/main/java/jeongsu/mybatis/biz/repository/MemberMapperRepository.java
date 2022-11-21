@@ -9,4 +9,5 @@ import java.util.Optional;
 public interface MemberMapperRepository {
     int insertMember(Member member);
     Optional<Member> selectMemberByName(String name);
+    int deleteMember(Long memberId);
 }

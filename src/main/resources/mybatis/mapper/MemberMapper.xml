@@ -2,7 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="jeongsu.mybatis.biz.repository.MemberMapperRepository">
-    <insert id="insertMember" parameterType="jeongsu.mybatis.web.dto.MemberDto">
+    <insert id="insertMember" parameterType="jeongsu.mybatis.biz.domain.Member">
         insert into member (name, phone, email) values (#{name}, #{phone}, #{email})
     </insert>
+    <select id="selectMemberByName" resultType="jeongsu.mybatis.biz.domain.Member" parameterType="String">
+        select name, phone, email from member where name = #{name}
+    </select>
 </mapper>

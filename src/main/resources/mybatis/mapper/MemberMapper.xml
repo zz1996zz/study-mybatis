@@ -6,7 +6,7 @@
         insert into member (name, phone, email) values (#{name}, #{phone}, #{email})
     </insert>
     <select id="selectMemberByName" resultType="jeongsu.mybatis.biz.domain.Member" parameterType="String">
-        select name, phone, email from member where name = #{name}
+        select * from member where name = #{name}
     </select>
     <delete id="deleteMember" parameterType="Long">
         delete from member where member_id = #{memberId}

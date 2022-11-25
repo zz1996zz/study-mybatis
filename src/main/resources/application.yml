@@ -8,3 +8,4 @@ mybatis:
   mapper-locations: classpath*:/mybatis/mapper/**/*.xml
   configuration:
     map-underscore-to-camel-case: true
+  type-aliases-package: jeongsu.mybatis.biz.domain
